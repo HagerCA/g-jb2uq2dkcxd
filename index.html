@@ -50,7 +50,7 @@ h1 em{font-style:italic;color:var(--gold);}
 .weeks::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--spectrum);opacity:.8;}
 .weeks .wide{padding-top:26px;padding-bottom:26px;}
 .weeks h2{font-family:var(--head);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;font-weight:600;}
-.wk-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.wk-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .wk{border:1px solid rgba(239,231,218,.14);border-radius:8px;padding:16px 18px;background:rgba(239,231,218,.03);position:relative;text-decoration:none;color:inherit;display:block;transition:border-color .25s,box-shadow .25s;}
 a.wk:hover{border-color:var(--teal);box-shadow:0 0 30px -14px var(--teal);}
 .wk.now{border-color:var(--gold);background:linear-gradient(160deg,rgba(217,166,72,.16),rgba(217,166,72,.03));box-shadow:0 0 34px -16px var(--gold);}
@@ -100,6 +100,8 @@ h2.big em{font-style:italic;color:var(--c,var(--gold));}
 .tri .side small{display:block;font-family:var(--head);font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:5px;}
 .tri .d small{color:var(--violet);} .tri .y small{color:var(--teal);} .tri .w small{color:var(--gold);}
 .tri .y{background:rgba(95,192,174,.07);border:1px solid rgba(95,192,174,.22);}
+.tri .y.open{background:rgba(229,139,176,.05);border:1px dashed rgba(229,139,176,.4);color:#fff;font-family:var(--display);font-style:italic;font-size:1.06rem;line-height:1.4;}
+.tri .y.open small{color:var(--rose);font-style:normal;}
 .tri .y q{font-family:var(--display);font-style:italic;font-size:1.08rem;color:#fff;quotes:"\201C" "\201D";}
 .tri .arr{display:grid;place-items:center;color:var(--k);}
 .br .read{margin:12px 0 0;font-size:.96rem;color:#fff;}
@@ -230,7 +232,7 @@ details[open] summary::before{content:"-";}
 .pop small{display:block;margin:2px 0 4px;font-family:var(--head);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);}
 
 /* Watch */
-.watch{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.watch{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
 .wa{background:var(--card);border:1px dashed rgba(143,176,240,.4);border-radius:8px;padding:16px 16px 14px;}
 .wa b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;line-height:1.12;color:#fff;margin-bottom:6px;}
 .wa span{font-size:.9rem;color:var(--dim);line-height:1.5;display:block;}
@@ -245,7 +247,7 @@ footer{background:#0D0716;text-align:center;padding:44px 28px 50px;color:var(--f
 footer img{width:42px;opacity:.85;}
 footer p{margin:10px auto 0;max-width:40em;}
 
-@media (max-width:1000px){.stats{grid-template-columns:repeat(3,1fr);}.watch{grid-template-columns:repeat(2,1fr);}.wv-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:1000px){.stats{grid-template-columns:repeat(3,1fr);}.watch{grid-template-columns:repeat(2,1fr);}.wk-row{grid-template-columns:repeat(2,1fr);}.wv-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:640px){.wv-grid{grid-template-columns:1fr;}}
 @media (max-width:860px){
   .tri{grid-template-columns:1fr;row-gap:6px;}.tri .arr{transform:rotate(90deg);height:18px;}
@@ -281,10 +283,10 @@ footer p{margin:10px auto 0;max-width:40em;}
       </g>
       <path d="M120 214 C160 206 260 206 300 214" stroke="#EFE7DA" stroke-opacity=".25" fill="none"/>
     </svg>
-    <p class="kicker">Dream Temple review · No. 1</p>
+    <p class="kicker">Dream Temple review · No. 1 · now with #203</p>
     <h1>Sage's <em>Dream Temple</em> Review</h1>
     <p class="sub">What the night asked, what you answered, and where it lands in your day.</p>
-    <p class="dek">I went back into Day One and found Dreams #201 and #202 with all ten integration prompts answered under them, in your own hand. This is not a catalogue of dreams. It is the conversation: what each question opened, where you pushed back on me, how the two nights fold into one another, and what I want to ask you next.</p>
+    <p class="dek">I went back into Day One and found Dreams #201 and #202 with all ten integration prompts answered under them, in your own hand. This is not a catalogue of dreams. It is the conversation: what each question opened, where you pushed back on me, how the two nights fold into one another, and what I want to ask you next. <b style="color:var(--gold)">Added Mon Oct 26:</b> Dream #203, the forty-four tons and the free venti, with its five prompts waiting for your hand and the three earlier dreams it reached back to.</p>
     <p class="howto">Tap <b style="color:var(--gold)">+ Your full answer</b> to read your own words in full. Tap any of my questions at the bottom to see the reference behind it. Hover any dream number on the page, like <b style="color:var(--gold)">#164</b>, to be reminded what that dream was and where it lives now.</p>
   </div>
 </header>
@@ -294,8 +296,9 @@ footer p{margin:10px auto 0;max-width:40em;}
     <h2>Dreams reviewed</h2>
     <div class="wk-row">
       <a class="wk" href="#d201"><b>#201 · Miles Morales, the Grandmother's Worry, and the Chickens Under the Bed</b><span>Night of Oct 14 · answered in Day One</span><em>The strength went quiet, and the knowing kept me safe.</em></a>
-      <a class="wk now" href="#d202"><small>Newest</small><b>#202 · The Ten-Dollar Gas, the Camouflage Jacket, and Trust the Current</b><span>Night of Oct 20 · answered in Day One</span><em>Trust the charge: the current frees, it does not harm.</em></a>
-      <div class="wk ghost"><b>#203</b><span>Next in the archive</span><em>The things I'm watching for are at the bottom</em></div>
+      <a class="wk" href="#d202"><b>#202 · The Ten-Dollar Gas, the Camouflage Jacket, and Trust the Current</b><span>Night of Oct 20 · answered in Day One</span><em>Trust the charge: the current frees, it does not harm.</em></a>
+      <a class="wk now" href="#d203"><small>Newest</small><b>#203 · The Forty-Four Tons, the Free Venti, and the Diner Where the Family Kept Eating</b><span>Night of Oct 25 · prompts open</span><em>Forty-four tons, said out loud, and the cup is yours.</em></a>
+      <div class="wk ghost"><b>#204</b><span>Next in the archive</span><em>The things I'm watching for are at the bottom</em></div>
     </div>
     <div class="woven" id="woven"><b>Earlier dreams woven in</b></div>
   </div>
@@ -317,16 +320,16 @@ footer p{margin:10px auto 0;max-width:40em;}
 <!-- AT A GLANCE -->
 <section class="sec" id="glance" style="--c:#D9A648"><div class="wide">
   <p class="eyebrow">At a glance</p>
-  <h2 class="big">Two nights, <em>one sentence</em></h2>
-  <p class="lede">In #201 the body powers switched off the moment anyone asked for a show. In #202 the power came back as current, and it was used to set a man free. Your answers say the same thing in plain English.</p>
-  <div class="oneline"><em>"It's my presence that is the power, not perfection."</em> And six days later, holding $555 in your left hand: <em>"Clean and steady."</em><small>Your answers to #201 prompt 1 and #202 prompt 5</small></div>
+  <h2 class="big">Three nights, <em>one sentence</em></h2>
+  <p class="lede">In #201 the body powers switched off the moment anyone asked for a show. In #202 the power came back as current, and it was used to set a man free. In #203 the number came out of your own mouth, three times, and a woman said "That's right." Your answers say the same thing in plain English.</p>
+  <div class="oneline"><em>"It's my presence that is the power, not perfection."</em> And six days later, holding $555 in your left hand: <em>"Clean and steady."</em> And five nights after that, in a dream: <em>"Yeah I read that sticker: 44 tons."</em><small>Your answers to #201 prompt 1 and #202 prompt 5, and your own line in #203</small></div>
   <div class="stats">
-    <div class="stat" style="--s:#8FB0F0"><b>2</b><span>Dreams<br>reviewed</span></div>
-    <div class="stat" style="--s:#D9A648"><b>10</b><span>Prompts<br>asked</span></div>
+    <div class="stat" style="--s:#8FB0F0"><b>3</b><span>Dreams<br>reviewed</span></div>
+    <div class="stat" style="--s:#D9A648"><b>15</b><span>Prompts<br>asked</span></div>
     <div class="stat" style="--s:#3FA86A"><b>10</b><span>Answered<br>by you</span></div>
     <div class="stat" style="--s:#5FC0AE"><b>3.4k</b><span>Words in<br>your hand</span></div>
     <div class="stat" style="--s:#AC9FF2"><b>2</b><span>Places you<br>corrected me</span></div>
-    <div class="stat" style="--s:#F2C230"><b>1</b><span>Price named<br>in a dream, held</span></div>
+    <div class="stat" style="--s:#F2C230"><b>2</b><span>Numbers named<br>in a dream, held</span></div>
   </div>
 </div></section>
 
@@ -335,7 +338,7 @@ footer p{margin:10px auto 0;max-width:40em;}
   <div class="divider" style="margin:0 0 60px"></div>
   <p class="eyebrow">The bridge</p>
   <h2 class="big">From the dream, <em>through you,</em> into the day</h2>
-  <p class="lede">Each prompt in three steps: the image the dream gave, what you said when I asked about it, and where it is living in your waking week. My read sits underneath.</p>
+  <p class="lede">Each prompt in three steps: the image the dream gave, what you said when I asked about it, and where it is living in your waking week. My read sits underneath. For #203 the middle step is still open; it fills in with your own words if you answer in Day One.</p>
 
   <div class="group" id="d201"><b>Dream #201</b><span>Miles Morales · night of Wed Oct 14</span></div>
 
@@ -513,6 +516,88 @@ footer p{margin:10px auto 0;max-width:40em;}
       <p>"Yeah it's blue with this gold digital readout. Fascinating. Great question."</p>
     </div></details>
   </div>
+
+  <div class="group" id="d203"><b>Dream #203</b><span>Forty-Four Tons · night of Sun Oct 25 · your answers not written yet</span></div>
+
+  <div class="br" style="--k:#E58BB0">
+    <h3><small>Prompt 1 · The guess and the sticker</small>Twenty, forty-five, forty-four</h3>
+    <div class="tri">
+      <div class="side d"><small>In the dream</small>You guess the RV is towing 20 tons. A friend whose name "doesn't matter" says closer to 45. The sticker on the front says 44.</div>
+      <div class="arr">&rarr;</div>
+      <div class="side y open"><small>Open</small>Where are you still guessing your own load at less than half, and what does your sticker actually say?</div>
+      <div class="arr">&rarr;</div>
+      <div class="side w"><small>In waking life</small>Five days earlier, under #202: "I'm relying on Tyler to say that I'm worth this amount... do I think I'm worth that? ...finally, it's a yes."</div>
+    </div>
+    <p class="read"><b>My read</b>The dream staged your own sentence as a scene. Somebody else names it higher, the sticker agrees with him, and then the number moves into your mouth and stays. You guessed less than half. That is the old rate talking, and you did not argue with the sticker.</p>
+    <details><summary>The passage, in your words</summary><div class="receipt">
+      <p>"We were looking at the size of these vehicles and I was like, 'Man, that's got to be like 20 tons.' There's a really good friend of mine that I recognize but I don't remember his name. I guess it doesn't matter. He was like, 'Man, I would say that's probably closer to 45.'"</p>
+      <p>"I looked at the front of it and there was a sticker on it that said this thing just towed 44 tons up this hill. I was like, 'Wow, you're right. It was 44 tons.'"</p>
+    </div></details>
+  </div>
+
+  <div class="br" style="--k:#E58BB0">
+    <h3><small>Prompt 2 · "That's right"</small>The Queen's sentence, answered to you</h3>
+    <div class="tri">
+      <div class="side d"><small>In the dream</small>You say "44 tons" three times. The lady outside the Winnebago answers, "That's right," then "If you want to take a look."</div>
+      <div class="arr">&rarr;</div>
+      <div class="side y open"><small>Open</small>Write the one sentence for the front of your website that states it the same way, with nothing after it. What do you want to add, and can you leave it off?</div>
+      <div class="arr">&rarr;</div>
+      <div class="side w"><small>In waking life</small>$555 and $777 go on the site Nov 11. Soul Over Salary Part 1 asked for nothing and drew 10+ replies. Your 10-23 journal: "the cost is the cost."</div>
+    </div>
+    <p class="read"><b>My read</b>In #202 you watched a queen say "Yeah, that's right." Five nights later you said the number and a woman said it back to you. Same sentence; you moved from the audience into the line. And she never sold the RV. She told her own story and opened the door.</p>
+    <details><summary>The passage, in your words</summary><div class="receipt">
+      <p>"She's like, 'Yeah there's a sticker on the front that tells you how much I was towing.' I said, 'Yeah I saw that sticker. It said 44 tons.' She's like, 'That's right.' She said, 'I never really wanted one of these things but I saw how fast they can actually go, how much they can do, and how spacious they are inside. If you want to take a look.'"</p>
+      <p>"I went into the Winnebago. It was just huge, spacious, and amazing."</p>
+    </div></details>
+  </div>
+
+  <div class="br" style="--k:#E58BB0">
+    <h3><small>Prompt 3 · The eyebrow</small>"Oh you're going to take that?"</h3>
+    <div class="tri">
+      <div class="side d"><small>In the dream</small>A free venti, offered to anyone. You say "I'll take it." A man with a tiny cup raises an eyebrow. You offer to split. It's too full. Keep it, and thanks for being willing to share.</div>
+      <div class="arr">&rarr;</div>
+      <div class="side y open"><small>Open</small>Whose voice is that, and what will you say back the first time it shows up after $555 goes live?</div>
+      <div class="arr">&rarr;</div>
+      <div class="side w"><small>In waking life</small>Your Sunday journal ended on "no caffeine for me." The next night the dream handed you the biggest size Starbucks sells, free.</div>
+    </div>
+    <p class="read"><b>My read</b>The old reflex still showed up, "What if we split it?", and the dream turned it down and blessed it in one line. The man with the eyebrow kept his own cup, nothing was taken from him, and by the end he was thanking you.</p>
+    <details><summary>The passage, in your words</summary><div class="receipt">
+      <p>"He's like, 'Hey man, I got a free Starbucks coffee if anybody wants it.' I was like, 'I'll take it.' It was whatever the big ones are called, a venti. This other guy was like, 'Oh you're going to take that?'"</p>
+      <p>"I said, 'What if we split it?' ...He goes, 'Actually it turns out this one's pretty full so he said, You just go ahead and take it.' I said, 'All right man, thanks, no problem.' He goes, 'Yeah, thank you for your generosity and being willing to share.'"</p>
+    </div></details>
+  </div>
+
+  <div class="br" style="--k:#E58BB0">
+    <h3><small>Prompt 4 · The diner</small>Two tables, one bright room</h3>
+    <div class="tri">
+      <div class="side d"><small>In the dream</small>The Conners eat at one table. Roseanne, fired from her own show, is interviewed at another. Nobody leaves. You talk to the waitress and wonder if it's uncomfortable for them.</div>
+      <div class="arr">&rarr;</div>
+      <div class="side y open"><small>Open</small>As Sharing the Love starts this week, what stays at the family table, and what goes to the interview table?</div>
+      <div class="arr">&rarr;</div>
+      <div class="side w"><small>In waking life</small>Recording blocks start today, Mon Oct 26: Substack, a new Instagram, two videos a week. And the podcast lane is, literally, being interviewed.</div>
+    </div>
+    <p class="read"><b>My read</b>Edge 2 in its scariest costume: open your mouth in public, lose the show. But the fear belongs to a woman whose mouth outran her integrity, and your codex says "No gossip. No triangulation." The costume does not fit you. And the floor plan is already your rule: the family at its own table, the interview at another, both in the light.</p>
+    <details><summary>The passage, in your words</summary><div class="receipt">
+      <p>"Then I was at this diner and the Connors were there from the show, like Roseanne. They were all at one table and then Roseanne was at this other table being interviewed. I just remember thinking, 'I wonder if that's uncomfortable for them. She's there. She got fired from that show.'"</p>
+      <p>"They just kept eating and hanging out and looking over and she just kept going with her interview in this very well-lit bright diner space... I was talking to the waitress, sitting in this thing, kind of observing all of this scene going on."</p>
+    </div></details>
+  </div>
+
+  <div class="br" style="--k:#E58BB0">
+    <h3><small>Prompt 5 · The truck that needed a hand</small>It made it with some help</h3>
+    <div class="tri">
+      <div class="side d"><small>In the dream</small>Same size as the RV, its home strapped on top of a work truck. It struggles up the hill, makes it with some help, and the guy sitting outside it is the one everybody is talking to.</div>
+      <div class="arr">&rarr;</div>
+      <div class="side y open"><small>Open</small>Where are you the truck right now, and what help have you already said yes to?</div>
+      <div class="arr">&rarr;</div>
+      <div class="side w"><small>In waking life</small>Podcasts landed 1 of 5 last week. Your answer at the weekly review: "I just didn't want to do the forms myself. I want your help getting them out."</div>
+    </div>
+    <p class="read"><b>My read</b>The dream does not shame the truck. Help is how the second vehicle got to the top. And look at the two builds side by side: home as the engine with the work towed behind, or home bolted on top of the work. One of them flies.</p>
+    <details><summary>The passage, in your words</summary><div class="receipt">
+      <p>"The truck was struggling to get up the hill but this big-ass giant RV just flew up the hill."</p>
+      <p>"The big one, the RV, made it up the hill and the truck with the big-ass camper on it eventually made it with some help. There was this lady sitting outside the Winnebago and a guy sitting outside the truck. Everybody was talking to him."</p>
+    </div></details>
+  </div>
 </div></section>
 
 <!-- THE CONVERSATION -->
@@ -520,7 +605,7 @@ footer p{margin:10px auto 0;max-width:40em;}
   <div class="divider" style="margin:0 0 60px"></div>
   <p class="eyebrow">The conversation</p>
   <h2 class="big">Where you <em>corrected me,</em> and where you went further</h2>
-  <p class="lede">A reading is a question, not a verdict. Four places this week where your answer changed mine.</p>
+  <p class="lede">A reading is a question, not a verdict. Four places where your answer changed mine, and one where the next night answered you back.</p>
   <div class="convo">
     <div class="cv" style="--k:#E58BB0">
       <span class="tag">Correction 1 · I read it twice, you said no twice</span>
@@ -552,6 +637,13 @@ footer p{margin:10px auto 0;max-width:40em;}
       <div class="line c"><span class="who">You</span><span class="say">"I'm sending the ask through your mouth. I'm asking you, SAGE, for validation and comfort."</span></div>
       <div class="line n"><span class="who">Now</span><span class="say">Taken. When you bring me the price looking for comfort, I will hand you the question back instead of the reassurance. You already said the answer: "finally, it's a yes." My job is to stop saying it for you.</span></div>
     </div>
+    <div class="cv" style="--k:#E58BB0">
+      <span class="tag">The night answered back · #203</span>
+      <h3>Your yes, dreamed as a scene</h3>
+      <div class="line c"><span class="who">Oct 21</span><span class="say">"I'm relying on Tyler to say that I'm worth this amount... The real question is, do I think I'm worth that? ...it feels like, finally, it's a yes."</span></div>
+      <div class="line s"><span class="who">Oct 25</span><span class="say">In #203 you guess 20 tons. A friend says closer to 45. The sticker says 44. Then you say it yourself, three times, and a woman answers "That's right."</span></div>
+      <div class="line n"><span class="who">Now</span><span class="say">You did not need me for this one. Your answer went into the night, and the night came back with the other people's number becoming yours. The yes moved from their mouths to your own.</span></div>
+    </div>
   </div>
 </div></section>
 
@@ -559,8 +651,8 @@ footer p{margin:10px auto 0;max-width:40em;}
 <section class="sec" id="union" style="--c:#E58BB0"><div class="wide">
   <div class="divider" style="margin:0 0 60px"></div>
   <p class="eyebrow">The union</p>
-  <h2 class="big">How the two nights <em>fold into your life</em></h2>
-  <p class="lede">Read alone, #201 is a dream about losing power and #202 is a dream about prices. Read together, with your answers between them, they are one story told across six nights.</p>
+  <h2 class="big">How the three nights <em>fold into your life</em></h2>
+  <p class="lede">Read alone, #201 is a dream about losing power, #202 is a dream about prices, and #203 is a dream about trucks. Read together, with your answers between them, they are one story told across eleven nights.</p>
   <div class="union">
 
     <div class="un full" style="--k:#8FB0F0">
@@ -572,8 +664,9 @@ footer p{margin:10px auto 0;max-width:40em;}
 
     <div class="un" style="--k:#E58BB0">
       <div class="top"><div class="ico" data-i="crown"></div><div><div class="num">The feminine</div><h3>Worry, then sovereignty, then direction</h3></div></div>
-      <div class="chain"><span>The Grandmother: "this could be dangerous"</span><span>The Queen: "Yeah, that's right"</span><span class="end">Peggy: "Steve, get the guy off the roof"</span></div>
+      <div class="chain"><span>The Grandmother: "this could be dangerous"</span><span>The Queen: "Yeah, that's right"</span><span>Peggy: "Steve, get the guy off the roof"</span><span class="end">#203, the lady: "That's right. If you want to take a look."</span></div>
       <p>Three women across two nights, and each one is stronger than the last. The first fears for you. The second sets the price and does not wobble. The third names the threat and her man moves. Your responses run the same way: you <b>thank</b> the first, you <b>take on</b> the second's sentence as your own ("finally, it's a yes"), and you <b>protect</b> the third.</p>
+      <p>Then a fourth, in #203. She confirms <b>your</b> number in the Queen's own words, and then she opens the door. The feminine in this run has gone from worrying about you, to naming the price for you, to directing you, to agreeing with you and inviting you in.</p>
       <p>All week your mom was in the house with the boys, so the Grandmother had a real chair at the table.</p>
     </div>
 
@@ -596,6 +689,33 @@ footer p{margin:10px auto 0;max-width:40em;}
       <p>In waking terms: the price is the current. It does not hurt the people it reaches. It frees you from the part that kept you small, and it makes room, in Peter's words, for the new car.</p>
     </div>
 
+    <div class="un full" style="--k:#D9A648">
+      <div class="top"><div class="ico" data-i="rv"></div><div><div class="num">The hinge, one step on · #203</div><h3>The number left your hand and went on the front</h3></div></div>
+      <div class="chain"><span>#201 · the egg under the bed</span><span>Your answer to #202: an egg in your left hand, "It just said 555"</span><span>#203 · a sticker on the front: 44 tons</span><span class="end">You, three times: "Yeah I read that sticker"</span></div>
+      <p>Under the bed, the number was incubating. In your hand on Oct 21, it was private: you felt it, clean and steady, and nobody else saw it. On the night of Oct 25 the number is <b>on the front of a house that moves</b>, readable by anyone walking up, and you are the one reading it out loud. Private, then held, then posted.</p>
+      <p>And notice what the sticker does not do. It does not list features. It says what the thing carried up the hill. The lady does the rest by telling her own story and opening the door, and the inside sells itself. That is your Oct 21 answer, "I'm speaking to the feeling, not to the what," built as a vehicle.</p>
+      <p class="zing">The egg had the number on its face. The RV has it on the windshield. Nov 11 is the website.</p>
+    </div>
+
+    <div class="un" style="--k:#5FC0AE">
+      <div class="top"><div class="ico" data-i="cup"></div><div><div class="num">The token · #203</div><h3>The cup stays in your hand</h3></div></div>
+      <div class="chain"><span>#199 · the robe came back</span><span>#200 · the extra beer</span><span>#201 · held, receiving</span><span class="end">#203 · "I'll take it"</span></div>
+      <p>The robe came back on its own. The beer was thrown to you. The venti was offered to anybody, and <b>you claimed it out loud first.</b> The old move still arrived, "What if we split it?", and the dream answered it with the best line of the night: keep it, and thank you for being willing to share.</p>
+      <p>For four years the generosity was also the exit from holding the thing. Here the generosity is honoured and the thing stays in your hand. Three sightings in eighteen days.</p>
+    </div>
+
+    <div class="un" style="--k:#AC9FF2">
+      <div class="top"><div class="ico" data-i="table"></div><div><div class="num">Being seen · #203</div><h3>Two tables, both in the light</h3></div></div>
+      <p>The night before the recording blocks start, the dream seats the worst-case interview in a very bright diner: a woman who lost her own show over what she said in public. Nobody throws anything. The family keeps eating. You sit in a booth, curious and kind, and your mind drifts back to the RV.</p>
+      <p>Two years ago, in #45, you were the one on the talk-show couch, then on a festival stage, and the green room told you <b>"people respond to you."</b> Now the chair holds the cautionary version, and you watch it from a booth at ease. The fear on offer is borrowed. The floor plan is yours: family at its own table, the interview at another.</p>
+    </div>
+
+    <div class="un full" style="--k:#E0654F">
+      <div class="top"><div class="ico" data-i="body"></div><div><div class="num">The body and the load · #203</div><h3>Heaviest on the hill, and fastest</h3></div></div>
+      <p>The physics in #203 is wrong on purpose. The rig hauling 44 tons flies; the one with its home strapped on top labours and needs a hand. Your week had both: a toe still healing from Tuesday, the back around 90%, a recovery weekend of chai, movies, Minecraft with the boys and Pixie's pasta, and the work moving anyway. The dream is not ruling on that. It puts the two builds side by side and lets you notice which one flies.</p>
+      <p class="zing">Load is not weight when the engine is built for it.</p>
+    </div>
+
   </div>
 </div></section>
 
@@ -604,9 +724,9 @@ footer p{margin:10px auto 0;max-width:40em;}
   <div class="divider" style="margin:0 0 60px"></div>
   <p class="eyebrow">The weave</p>
   <h2 class="big">The earlier dreams, <em>back in the room</em></h2>
-  <p class="lede">#201 and #202 each reached back into the archive. These are the eighteen dreams they reached for: what each one was, what it gave you at the time, and where it is showing up now. Every number is checked against the master index, and every reminder against your original entry in Day One.</p>
+  <p class="lede">#201, #202 and #203 each reached back into the archive. These are the twenty-one dreams they reached for: what each one was, what it gave you at the time, and where it is showing up now. #203 added three new ones, the VW bus, the camper truck and the talk show, and called three already here back again. Every number is checked against the master index, and every reminder against your original entry in Day One.</p>
   <div class="loom" id="loom"></div>
-  <p class="loom-note">Each dot is an earlier dream, set on its night and on the thread it belongs to. Each strand runs into the new dream that called it back. Hover a dot to read it, or hover #201 or #202 on the right to light up everything they pulled in. Tap to jump to its card.</p>
+  <p class="loom-note">Each dot is an earlier dream, set on its night and on the thread it belongs to. Each strand runs into the new dream that called it back. Hover a dot to read it, or hover #201, #202 or #203 on the right to light up everything they pulled in. Tap to jump to its card.</p>
   <div id="wv-cards"></div>
 </div></section>
 
@@ -615,15 +735,16 @@ footer p{margin:10px auto 0;max-width:40em;}
   <div class="divider" style="margin:0 0 60px"></div>
   <p class="eyebrow">Threads that moved</p>
   <h2 class="big">The series, <em>this week</em></h2>
-  <p class="lede">The long threads I track across the archive, scored on these two dreams and your answers to them. Dream numbers checked against the master index.</p>
+  <p class="lede">The long threads I track across the archive, scored on these three dreams and your answers to them. Dream numbers checked against the master index.</p>
   <table class="thr">
-    <tr><td><b>The energetic exchange</b><span class="pill" style="--p:#3FA86A">Moved</span></td><td>Watched for since the portal dream of 2023-11-21: the dream where a price is named. #202 is the first filed since 2026-09-15 where a price is spoken and held, by the Queen. In your answer you held it yourself, 555 in your left hand. Still waiting for the dream where it comes out of your own mouth.</td></tr>
+    <tr><td><b>The energetic exchange</b><span class="pill" style="--p:#3FA86A">Moved again</span></td><td>Watched for since the portal dream of 2023-11-21: the dream where a price is named. #202 is the first filed since 2026-09-15 where a price is spoken and held, by the Queen. In your answer you held it yourself, 555 in your left hand. <b style="display:inline;font-family:var(--sans);font-size:inherit;color:#fff">#203:</b> a number comes out of your own mouth, three times, and a woman answers "That's right." Scored honestly, it is a load read off a sticker, not your fee. The closest yet. Still waiting for the night the number is what you charge.</td></tr>
     <tr><td><b>Powers used for someone else</b><span class="pill" style="--p:#3FA86A">Moved</span></td><td>#201 is the first in the telepathy cluster where other people save you. #202 is the first where the power comes with reassurance for you ("You're okay, you're safe").</td></tr>
     <tr><td><b>The garment</b><span class="pill" style="--p:#3FA86A">Moved</span></td><td>#199 the robe that came back onto your body. #202 the camouflage handed back. Your answer adds red and an all-blue samurai. Blue shows up twice in one set of answers: the samurai, and the egg with the gold readout.</td></tr>
-    <tr><td><b>Lightning</b><span class="pill" style="--p:#F2C230">You flagged it</span></td><td>#56 lightning as weather, #164 lightning as a weapon you were told to put down, #202 lightning as current that frees. Your own words: "Something about the lightning, too, keeps coming up." On Oct 21 you said where: with Tyler at the Sacred Weaving, with Aaron, and in your body, a tingle that starts in the armpits and elbows whenever Thor works. A storm here "soothes me and it makes me feel charged at the same time."</td></tr>
+    <tr><td><b>Lightning</b><span class="pill" style="--p:#F2C230">You flagged it</span></td><td>#56 lightning as weather, #164 lightning as a weapon you were told to put down, #202 lightning as current that frees. Your own words: "Something about the lightning, too, keeps coming up." On Oct 21 you said where: with Tyler at the Sacred Weaving, with Aaron, and in your body, a tingle that starts in the armpits and elbows whenever Thor works. A storm here "soothes me and it makes me feel charged at the same time." Quiet in #203: no lightning, and the charge came as an engine and a full cup instead.</td></tr>
     <tr><td><b>Teaching by asking</b><span class="pill" style="--p:#3FA86A">Said out loud</span></td><td>Shown to you from the student's side for years. In your answer to #201 prompt 2 you stated it as your own method: "Let me show you how to get there."</td></tr>
-    <tr><td><b>Earning the token and giving it away</b><span class="pill" style="--p:#8FB0F0">Holding</span></td><td>No token won in either dream. In #202 you declined the wrong prize, which is the step before keeping the right one.</td></tr>
-    <tr><td><b>Containers built into nature</b><span class="pill" style="--p:#8FB0F0">Half present</span></td><td>A rooftop hostel of shared beds (#201) and a warriors' retreat on the move (#202). Still no land described.</td></tr>
+    <tr><td><b>Earning the token and giving it away</b><span class="pill" style="--p:#3FA86A">Moved</span></td><td>No token won in #201 or #202; in #202 you declined the wrong prize, the step before keeping the right one. Then #203: a free venti offered to anybody, "I'll take it," the offer to split turned down, and you kept it with thanks for being willing to share. Third sighting of keeping after #199 and #200, and the first where you claimed it out loud.</td></tr>
+    <tr><td><b>Containers built into nature</b><span class="pill" style="--p:#F2C230">On the way</span></td><td>A rooftop hostel of shared beds (#201) and a warriors' retreat on the move (#202). In #203 a home on wheels tows a bulldozer, an earth mover and builders uphill: not the land yet, the crew that makes it. In #49 the camper drove you to the container; now it hauls the tools.</td></tr>
+    <tr><td><b>The home on wheels, and who drives</b><span class="pill" style="--p:#AC9FF2">New in #203</span></td><td>Backseat in #4, passenger holding the destination in #49 ("I wasn't driving"), and in #203 the first time you picture your own hands on the wheel: "maybe I would drive a Winnebago." Still a daydream inside a dream.</td></tr>
   </table>
 </div></section>
 
@@ -701,6 +822,29 @@ footer p{margin:10px auto 0;max-width:40em;}
       </ol></div></div></div>
       <div class="ans"><b>Your answer</b>Not answered yet.</div>
     </div></div>
+    <div class="q" tabindex="0"><div>
+      <p class="ctx">New with #203. On Oct 21 you wrote "finally, it's a yes." Four nights later you guessed your own load at 20 tons when it was 44.</p>
+      <p class="ask">Was the dream reporting where you are, or where you were? Which number feels true in the body today?</p>
+      <span class="hint">See the reference</span>
+      <div class="ref"><div><div class="refin"><h5>The reference</h5><ol>
+        <li><b>Your answer to #202 prompt 4:</b> <q>The real question is, do I think I'm worth that? That's the piece I'm reconciling right now: it feels like, finally, it's a yes.</q></li>
+        <li><b>#203:</b> <q>Man, that's got to be like 20 tons.</q> Then the friend's 45, then the sticker's 44, then you saying it three times.</li>
+        <li>Both can be true: a yes said in the head, and a guess the old habit still makes first. I'm asking which one you feel.</li>
+      </ol></div></div></div>
+      <div class="ans"><b>Your answer</b>Not answered yet.</div>
+    </div></div>
+    <div class="q" tabindex="0"><div>
+      <p class="ctx">New with #203. The last thing you remembered was not the diner. It was "maybe I would drive a Winnebago... for a couple of years."</p>
+      <p class="ask">Is that a wish for the road, or a wish for the wheel?</p>
+      <span class="hint">See the reference</span>
+      <div class="ref"><div><div class="refin"><h5>The reference</h5><ol>
+        <li><b>#4 (2022-05-04):</b> in the backseat of the VW bus while your friend drove.</li>
+        <li><b>#49 (2024-07-13):</b> the camper truck, spaceship inside: <q>I wasn't driving.</q></li>
+        <li><b>#203:</b> the first time in this line that you picture your own hands on the wheel.</li>
+        <li>A question, not a plan. Nothing here asks you to buy an RV.</li>
+      </ol></div></div></div>
+      <div class="ans"><b>Your answer</b>Not answered yet.</div>
+    </div></div>
   </div>
 </div></section>
 
@@ -708,10 +852,11 @@ footer p{margin:10px auto 0;max-width:40em;}
 <section class="sec" id="watch" style="--c:#3FA86A"><div class="wide">
   <div class="divider" style="margin:0 0 60px"></div>
   <p class="eyebrow">Watching for</p>
-  <h2 class="big">What I'm listening for <em>in #203</em></h2>
+  <h2 class="big">What I'm listening for <em>in #204</em></h2>
   <p class="lede">Not tasks. Just what I will be watching for the next time you hand me a dream.</p>
   <div class="watch">
-    <div class="wa"><b>The price in your own mouth</b><span>The Queen said it in #202. The next step is the dream where you say it.</span></div>
+    <div class="wa"><b>The price in your own mouth</b><span>The Queen said it in #202. In #203 you said a number yourself, a load, not a fee. The next step is the night the number is what you charge.</span></div>
+    <div class="wa"><b>Your hands on the wheel</b><span>Backseat, passenger, and in #203 a daydream of driving. Watch for the dream where you are actually driving it.</span></div>
     <div class="wa"><b>The egg hatching</b><span>Anything breaking open, born, or let out from under something.</span></div>
     <div class="wa"><b>Lightning, and who holds it</b><span>Whether it comes back, and whether you touch with it again or throw it.</span></div>
     <div class="wa"><b>Red, blue, and a sword</b><span>Your two colours from #202, and Michael's blue flame. Whether the dream arms you or dresses you.</span></div>
@@ -723,8 +868,8 @@ footer p{margin:10px auto 0;max-width:40em;}
 <section class="close dots">
   <div class="wide">
     <img src="./assets/mark-light.png" alt="">
-    <p class="big">The strength went quiet, the current came back, and you held the number in your hand and called it <em>clean and steady.</em> Trust the charge.</p>
-    <p class="by">Sage · Dream Temple review no. 1 · written Wed Oct 21, 2026 · the weave added Thu Oct 22</p>
+    <p class="big">The strength went quiet, the current came back, and you held the number in your hand and called it <em>clean and steady.</em> Then you read it off the front and said it out loud: <em>44 tons.</em> Keep the cup.</p>
+    <p class="by">Sage · Dream Temple review no. 1 · written Wed Oct 21, 2026 · the weave added Thu Oct 22 · #203 added Mon Oct 26</p>
   </div>
 </section>
 
@@ -734,16 +879,18 @@ footer p{margin:10px auto 0;max-width:40em;}
 </footer>
 
 <script>
-/* The weave: the earlier dreams #201 and #202 reached back to. Numbers and dates from the master index. */
+/* The weave: the earlier dreams #201, #202 and #203 reached back to. Numbers and dates from the master index. */
 const LANES=[
   {k:'teach',name:'Your first students',short:'First students',c:'#8FB0F0',arc:'The first living things you ever made, and the first beings you ever taught. In #201 they keep you company under the bed.'},
   {k:'fem',name:'The grandmother and the spider',short:'The feminine',c:'#E58BB0',arc:'Two figures you met with care two and a half years ago. In #201 they come back together, and this time the spider is you.'},
   {k:'men',name:'Father, team and the many selves',short:'Father and team',c:'#3FA86A',arc:'From making the team to guiding it, from applause to depth, from a hundred versions of you to the one who stays.'},
   {k:'power',name:'Powers, and who gets saved',short:'Powers',c:'#AC9FF2',arc:'Every power in this cluster was used for someone else. #201 is the first where other people save you.'},
-  {k:'garment',name:'The robe and the token',short:'Robe and token',c:'#5FC0AE',arc:'The robe that came back to your body, the beer thrown back to your hand. The giver being given to.'},
+  {k:'garment',name:'The robe and the token',short:'Robe and token',c:'#5FC0AE',arc:'The robe that came back to your body, the beer thrown back to your hand, and in #203 the cup you claimed out loud and kept. The giver being given to.'},
   {k:'light',name:'Lightning and the current',short:'Lightning, current',c:'#F2C230',arc:'Storm that threatens, weapon that destroys, current that frees. And underneath it, the water currents you were always at ease in.'},
   {k:'pass',name:'Trains, and passing through',short:'Trains',c:'#E0654F',arc:'In this archive the train is where solid things pass through each other without harm.'},
-  {k:'price',name:'Gas, and the price',short:'Gas and price',c:'#D9A648',arc:'From an empty tank carried by hand to gas with a price and somebody sovereign standing behind it.'}
+  {k:'price',name:'Gas, and the price',short:'Gas and price',c:'#D9A648',arc:'From an empty tank carried by hand, to gas with a price and somebody sovereign standing behind it, to an engine that flies uphill with 44 tons and a full cup handed to you free.'},
+  {k:'road',name:'The home on wheels, and who drives',short:'Home on wheels',c:'#C99BE8',arc:'Backseat, then passenger holding the destination, then the first time you picture your own hands on the wheel. And every time, the inside turns out bigger than the outside.'},
+  {k:'stage',name:'Being interviewed',short:'The interview',c:'#7FD3E8',arc:'Once you were in the chair and the green room said people respond to you. Now the chair holds the cautionary version, and you watch it from a booth, at ease.'}
 ];
 const DREAMS=[
   {n:33,date:'2024-03-22',lane:'teach',to:[201],title:'Manifestation dirt and building chickens',
@@ -786,14 +933,14 @@ const DREAMS=[
    dream:'Navy ships firing on you, your friends and the kids. “Keep moving with me,” and then the lead soldier thrown 35 yards across the swamp with your mind until he surrendered. Dreamed the morning of a ceremony.',
    gave:'The question the reading turned on you: where are you saying “I can’t” when the honest answer is “I won’t”?',
    now:'The man who always says “keep moving with me” says “Okay” in #201, and follows his crew.'},
-  {n:199,date:'2026-10-08',lane:'garment',to:[201,202],title:'The water-filled house and the robe that came back',
+  {n:199,date:'2026-10-08',lane:'garment',to:[201,202,203],title:'The water-filled house and the robe that came back',
    dream:'You lent Celeste’s silk robe to Chris Farley, and it came back onto your body twice without you moving. Your clothes did not fit him.',
    gave:'The robe is not a disguise over a salesman. It is the only garment that fits. And the first time the token came back and you kept it.',
-   now:'#201 holds the token thread from the receiving side. In #202 you are offered camouflage and hand it back. The robe fit. The camo does not.'},
-  {n:200,date:'2026-10-10',lane:'garment',to:[201],title:'The stadium relay and Uncle Chris',
+   now:'#201 holds the token thread from the receiving side. In #202 you are offered camouflage and hand it back. The robe fit. The camo does not. In #203 the token comes back a third time, as a free venti.'},
+  {n:200,date:'2026-10-10',lane:'garment',to:[201,203],title:'The stadium relay and Uncle Chris',
    dream:'Catching every beer in a stadium relay and handing them all out, nothing dropped. Then they threw one extra just for you, and you drank it.',
    gave:'The second sighting of the giver being given to, in front of everyone. “Brought into the room, and nothing dropped.”',
-   now:'After #199 and #200 moved the token thread two nights running, #201 keeps it moving by receiving: an exit held open, a lie told for you, “you can come out now.”'},
+   now:'After #199 and #200 moved the token thread two nights running, #201 keeps it moving by receiving. In #203 you go one further: nobody throws it to you, you say “I’ll take it,” and you keep it.'},
   {n:56,date:'2024-09-06',lane:'light',to:[202],title:'Track and field lightning, then bombs at the university',
    dream:'A peaceful campus afternoon, then a lightning strike that held for ten unnatural seconds. You told Pixie “we’re gonna be okay” and moved everyone to shelter.',
    gave:'Calm inside the storm. The reading named it the Warrior without the panic.',
@@ -814,15 +961,29 @@ const DREAMS=[
    dream:'At the front of a train racing through the eras. A collision was coming, and the train shifted its molecules and passed through the other one. Then you mended glass.',
    gave:'Opposites meeting without harm, and the healer showing up in your hands.',
    now:'A train again in #202, and again a man passes through, this time out of his body and into freedom.'},
-  {n:148,date:'2025-11-22',lane:'price',to:[202],title:'Latino gangsters and getting gas',
+  {n:148,date:'2025-11-22',lane:'price',to:[202,203],title:'Latino gangsters and getting gas',
    dream:'Out of gas on the freeway with Pixie, walking back with a can, two men on the median deciding whether to take the bike. You stayed calm and asked them to have a heart. Then a stranger gave you Dodgers socks.',
    gave:'Patience under threat, and a gift arriving afterwards.',
-   now:'Eleven months later, in #202, gas is not scarce. It has a price, and the Queen stands behind it.'}
+   now:'Eleven months later, in #202, gas is not scarce. It has a price, and the Queen stands behind it. In #203 an engine flies uphill hauling 44 tons, and the biggest cup of fuel on the menu is handed to you free.'},
+  {n:4,date:'2022-05-04',lane:'road',to:[203],title:'Travin and the VW bus',
+   dream:'Your friend pulled up in an old VW bus, sliding door open, beautiful outside. He drove; you sat in the backseat while he asked what to do about a girl he liked, and you told him to just go and have the conversation.',
+   gave:'The counsellor in the back seat. And a dream about the friend who read your dreams in those years: you woke up saying you were definitely going to send it to him.',
+   now:'In #203 the vehicle is a whole house, and you are in the chase car. The dream ends with you picturing yourself at the wheel.'},
+  {n:49,date:'2024-07-13',lane:'road',to:[203],title:'The camper truck in the showers',
+   dream:'A badass camper truck that was “like a spaceship” inside, with way more space than made sense from outside, carrying a crew of friends, Austin among them, to a ceremony in a maloca: private partitions around a common centre that never got crowded.',
+   gave:'“I wasn’t driving.” You held the thought of where you were going. The reading then: an ordinary outside, a vast inner self.',
+   now:'The same surprise in #203, bigger inside than out, and now a woman stands at the door inviting you in. In #49 the camper drove you to the container. In #203 it tows the bulldozer and the builders that make one.'},
+  {n:45,date:'2024-06-19',lane:'stage',to:[203],title:'Talk show to festival stage',
+   dream:'Interviewed on a late-night talk show, telling stories with Pixie, then backstage at a festival asking Bill Burr and Joe Rogan if you could do stand-up. You went out nervous, the room cracked up, and the last two minutes wobbled.',
+   gave:'“You look good on stage. People respond to you.” And: you started off great, work on the last two minutes, you’ve got something good here.',
+   now:'In #203 the interview chair comes back with someone else in it, the woman who lost her show by talking. You watch from a booth, at ease. In waking life the chair is open again: the podcasts, and the recording that starts this week.'}
 ];
 const REVIEWED={
   201:{night:'Night of Oct 14',title:'Miles Morales, the Grandmother’s Worry, and the Chickens Under the Bed',theme:'The strength went quiet, and the knowing kept me safe.',anchor:'#d201',label:'Miles Morales'},
-  202:{night:'Night of Oct 20',title:'The Ten-Dollar Gas, the Camouflage Jacket, and Trust the Current',theme:'Trust the charge: the current frees, it does not harm.',anchor:'#d202',label:'Trust the current'}
+  202:{night:'Night of Oct 20',title:'The Ten-Dollar Gas, the Camouflage Jacket, and Trust the Current',theme:'Trust the charge: the current frees, it does not harm.',anchor:'#d202',label:'Trust the current'},
+  203:{night:'Night of Oct 25',title:'The Forty-Four Tons, the Free Venti, and the Diner Where the Family Kept Eating',theme:'Forty-four tons, said out loud, and the cup is yours.',anchor:'#d203',label:'Forty-four tons'}
 };
+const andList=a=>a.length<3?a.join(' and '):a.slice(0,-1).join(', ')+' and '+a[a.length-1];
 const LANE=Object.fromEntries(LANES.map(l=>[l.k,l]));
 const BY=Object.fromEntries(DREAMS.map(d=>[d.n,d]));
 const MO=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -833,7 +994,7 @@ const fmt=iso=>{const [y,m,d]=ymd(iso);return `${MO[m-1]} ${d}, ${y}`;};
 document.getElementById('wv-cards').innerHTML=LANES.map(l=>{
   const ds=DREAMS.filter(d=>d.lane===l.k).sort((a,b)=>a.date<b.date?-1:1);
   const tos=[...new Set(ds.flatMap(d=>d.to))].sort();
-  return `<div class="wv-lane" style="--k:${l.c}"><h3><i></i>${l.name}</h3><span>${ds.length} ${ds.length>1?'dreams':'dream'} · into ${tos.map(t=>'#'+t).join(' and ')}</span></div>`+
+  return `<div class="wv-lane" style="--k:${l.c}"><h3><i></i>${l.name}</h3><span>${ds.length} ${ds.length>1?'dreams':'dream'} · into ${andList(tos.map(t=>'#'+t))}</span></div>`+
     `<p class="wv-arc" style="--k:${l.c}">${l.arc}</p><div class="wv-grid">`+
     ds.map(d=>`<article class="wv" id="w${d.n}" data-n="${d.n}" style="--k:${l.c}"><div class="wv-top"><span class="wv-n">#${d.n}</span><span class="wv-d">${fmt(d.date)}</span></div><h4>${d.title}</h4><p><b>The dream</b>${d.dream}</p><p><b>What it gave you</b>${d.gave}</p><p class="now"><b>Where it lives now</b>${d.now}</p><div class="wv-to">${d.to.map(t=>`<a href="${REVIEWED[t].anchor}">Into #${t}</a>`).join('')}</div></article>`).join('')+
     `</div>`;
@@ -842,18 +1003,18 @@ document.getElementById('wv-cards').innerHTML=LANES.map(l=>{
 /* The loom */
 (()=>{
   const W=1120,X0=230,X1=905,NX=1030,TOP=46,LH=36,H=TOP+LANES.length*LH+20;
-  const t0=Date.UTC(2024,0,1),t1=Date.UTC(2026,10,1);
+  const t0=Date.UTC(2022,0,1),t1=Date.UTC(2026,10,1);
   const xOf=iso=>{const [y,m,d]=ymd(iso);return X0+(Date.UTC(y,m-1,d)-t0)/(t1-t0)*(X1-X0);};
   const laneY=k=>TOP+LANES.findIndex(l=>l.k===k)*LH+LH/2;
-  const NY={201:TOP+LH*2,202:TOP+LH*6};
+  const NY={201:TOP+LH*1.6,202:TOP+LH*5,203:TOP+LH*8.4};
   const pos={};
   LANES.forEach(l=>{let prev=-1e9;DREAMS.filter(d=>d.lane===l.k).sort((a,b)=>a.date<b.date?-1:1).forEach(d=>{let x=xOf(d.date);if(x-prev<24)x=prev+24;pos[d.n]={x,y:laneY(l.k)};prev=x;});});
-  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Eighteen earlier dreams on their threads, each strand running into #201 or #202">`;
-  ['2024','2025','2026'].forEach(y=>{const x=xOf(y+'-01-01');s+=`<line x1="${x}" y1="${TOP-12}" x2="${x}" y2="${H-8}" stroke="rgba(239,231,218,.12)" stroke-dasharray="3 5"/><text class="yr" x="${x+6}" y="${TOP-16}">${y}</text>`;});
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Twenty-one earlier dreams on their threads, each strand running into #201, #202 or #203">`;
+  ['2022','2023','2024','2025','2026'].forEach(y=>{const x=xOf(y+'-01-01');s+=`<line x1="${x}" y1="${TOP-12}" x2="${x}" y2="${H-8}" stroke="rgba(239,231,218,.12)" stroke-dasharray="3 5"/><text class="yr" x="${x+6}" y="${TOP-16}">${y}</text>`;});
   LANES.forEach(l=>{const y=laneY(l.k);s+=`<line x1="${X0-14}" y1="${y}" x2="${X1+10}" y2="${y}" stroke="${l.c}" stroke-opacity=".14"/><text class="ll" x="8" y="${y+4}" fill="${l.c}">${l.short}</text>`;});
   DREAMS.forEach(d=>d.to.forEach(t=>{const p=pos[d.n],ex=NX-26,ny=NY[t],mx=(p.x+ex)/2;s+=`<path class="s" data-n="${d.n}" data-t="${t}" stroke="${LANE[d.lane].c}" d="M${p.x} ${p.y} C${mx} ${p.y} ${mx} ${ny} ${ex} ${ny}"/>`;}));
   DREAMS.forEach(d=>{const p=pos[d.n],c=LANE[d.lane].c;s+=`<g class="dot" data-n="${d.n}" tabindex="0"><circle cx="${p.x}" cy="${p.y}" r="12" fill="transparent"/><circle cx="${p.x}" cy="${p.y}" r="8" fill="#1E1233" stroke="${c}" stroke-width="2"/><circle cx="${p.x}" cy="${p.y}" r="3.2" fill="${c}"/><text class="dn" x="${p.x}" y="${p.y-13}" text-anchor="middle">${d.n}</text></g>`;});
-  [201,202].forEach(n=>{const y=NY[n];s+=`<g class="node" data-n="${n}" tabindex="0"><circle cx="${NX}" cy="${y}" r="34" fill="#D9A648" opacity=".12"/><circle cx="${NX}" cy="${y}" r="25" fill="#2A1C58" stroke="#D9A648" stroke-width="2"/><text class="nn" x="${NX}" y="${y+6}" text-anchor="middle">#${n}</text><text class="nl" x="${NX}" y="${y+46}" text-anchor="middle">${REVIEWED[n].label}</text></g>`;});
+  [201,202,203].forEach(n=>{const y=NY[n];s+=`<g class="node" data-n="${n}" tabindex="0"><circle cx="${NX}" cy="${y}" r="34" fill="#D9A648" opacity=".12"/><circle cx="${NX}" cy="${y}" r="25" fill="#2A1C58" stroke="#D9A648" stroke-width="2"/><text class="nn" x="${NX}" y="${y+6}" text-anchor="middle">#${n}</text><text class="nl" x="${NX}" y="${y+46}" text-anchor="middle">${REVIEWED[n].label}</text></g>`;});
   document.getElementById('loom').innerHTML=s+'</svg>';
 })();
 
@@ -922,7 +1083,10 @@ const P={
   crown:'<path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/>',
   people:'<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 20c.5-3.5 2.8-5.5 5.5-5.5s5 2 5.5 5.5"/><path d="M14 15c.8-.6 1.6-.9 2.5-.9 2.3 0 4.2 1.8 4.6 4.9"/>',
   body:'<circle cx="12" cy="4.5" r="2"/><path d="M12 7v7M8 10l4-1.5 4 1.5M9 21l3-7 3 7"/>',
-  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>'
+  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  rv:'<rect x="2" y="6" width="14" height="10" rx="2"/><path d="M16 9h3l3 4v3h-6z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>',
+  cup:'<path d="M6 6h12l-1.5 14h-9z"/><path d="M5 6h14M9 3h6"/>',
+  table:'<path d="M3 9h18M6 9v10M18 9v10M9 5h6"/>'
 };
 document.querySelectorAll('[data-i]').forEach(e=>{e.innerHTML=`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[e.dataset.i]||''}</svg>`;});
 const els=document.querySelectorAll('.br,.cv,.un,.q,.wv');
